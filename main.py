@@ -59,10 +59,17 @@ def detection(image_path):
     
     return image
     
-for image in os.listdir('guage'):
-    detection('guage/' + image)
+for image_name in os.listdir('gauge'):
+    image_path = os.path.join('gauge', image_name)
+    result_image = detection(image_path)  # Image returned by detection function
 
+    # Extract the file name from the path
+    file_name = os.path.splitext(image_name)[0]
 
+    # Show the canvas with all images
+    cv2.imshow(file_name, result_image)
+    cv2.imwrite("result.jpg", result_image)
+   
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
