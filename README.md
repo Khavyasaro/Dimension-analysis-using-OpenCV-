@@ -25,8 +25,9 @@ Place your images in a specified directory within the same directory as the scri
   python <filename>.py
 
 The script processes all images in the gauge directory, calculates the diameters of the detected contours, and displays the images with the diameter annotated. It also prints the maximum, mean, and mode of the diameters of all processed images to the console.
-The mean, mode calculation is for identifying bias and variance in the results of images taken at a time.
+In calculation part, the pixel per ratio value differs for different cameras.To get the approx value, should calculate the results from images get by both manual and computer based pixel analysis.The mean, mode calculation is for identifying bias and variance in the results of images taken at a time.
 
+Note: For pixel analysis, it is recommended to use software called ImageJ 
 # Contribution guidelines
 Contributions are welcome! If you have improvements or bug fixes, please open a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
